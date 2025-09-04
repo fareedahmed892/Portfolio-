@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 14px;
+  font-style: italic;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ff9800;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.bg-light {
+  background: #f4f4f4;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #ff9800;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
